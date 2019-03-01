@@ -7,7 +7,7 @@ class Solution {
         }
         
         char[] ans = new char[s.length()]; 
-        
+         
         PriorityQueue<Character> queue = new PriorityQueue<>((a,b) -> map.get(b) - map.get(a));
         int count = 0; 
         queue.addAll(map.keySet());
