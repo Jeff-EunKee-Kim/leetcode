@@ -44,6 +44,29 @@ class Solution {
 //     }
 // }
 
+// Recursive with Memoization
+// class Solution {
+//     public boolean wordBreak(String s, List<String> wordDict) {
+//         if(s == null || s.equals("")){
+//             return true; 
+//         }
+//         HashSet<Integer> memo = new HashSet<>();         
+//         return canBreak(s, 0, wordDict, memo); 
+//     }
+//     public boolean canBreak(String s, int index, List<String> wordDict, HashSet<Integer> memo){
+//         if (index == s.length()) return true; 
+//         if(memo.contains(index)) return false; 
+//         for(int i = index; i < s.length(); i ++){
+//             if(wordDict.contains(s.substring(index, i + 1)) && canBreak(s, i+1, wordDict, memo)){
+//                 return true; 
+//             }else{
+//                 memo.add(index);
+//             }
+//         }
+//         return false; 
+//     }
+// }
+
 // Recursive Solution
 // class Solution {
 //     public boolean wordBreak(String s, List<String> wordDict) {
