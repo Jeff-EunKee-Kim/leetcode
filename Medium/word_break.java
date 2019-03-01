@@ -20,6 +20,29 @@ class Solution {
     }
 }
 
+// Recurse with memoization
+// class Solution {
+//     public boolean wordBreak(String s, List<String> wordDict) {
+//         if ( s == null) return true; 
+//         HashSet<Integer> memo = new HashSet<>(); 
+//         return helper(s, 0, wordDict, memo); 
+//     }
+//     public boolean helper (String s, int index, List<String> wordDict, Set<Integer> memo){
+//         if (index == s.length()) return true; 
+//         if(memo.contains(index)) return false; 
+//         for (int i = index; i< s.length(); i++){
+//             if(wordDict.contains(s.substring(index,i+1))){
+//                 if(helper(s, i+1, wordDict, memo)){
+//                     return true;
+//                 }else{
+//                     memo.add(i);
+//                 }
+//             } 
+//         }
+//         return false; 
+
+//     }
+// }
 
 // Recursive Solution
 // class Solution {
